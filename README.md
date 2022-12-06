@@ -1,6 +1,6 @@
 # Travelocity
 
-![Travelocity](src/images/template.png)
+![Travelocity_Template](src/images/travelocity.png)
 
 #### Travelocity is  A full-stack booking service provider web application project with firebase authentication. where any person can book a hotel, and an Admin can view the booking lists and add hotels and manage the whole system.
 
