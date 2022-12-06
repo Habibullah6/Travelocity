@@ -1,0 +1,33 @@
+.custom-login-container{
+  width: 40%;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  
+}
+
+.custom-login-container button{
+  border: none;
+  color: dimgray;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 2px solid #00c1a2;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+    .custom-login-container  {
+      width: 90%;
+    }
+}
+
+
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+  .custom-login-container {
+    width: 70%;
+  }
+}

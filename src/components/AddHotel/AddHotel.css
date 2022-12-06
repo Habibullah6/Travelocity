@@ -1,0 +1,23 @@
+.add-hotel-container form{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+.add-hotel-container form input {
+    width: 80%;
+    margin: 10px;
+    border: none;
+    outline: none;
+    border: 2px solid #00c1a2;
+    height: 40px;
+    border-radius: 10px;
+}
+
+
+@media only screen and (max-width: 768px){
+    .add-hotel-container form input {
+        width: 100%;
+    }
+}

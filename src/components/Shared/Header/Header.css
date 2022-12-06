@@ -1,0 +1,44 @@
+.custom-nav-style li a {
+    text-decoration: none;
+    color: #808080;
+
+}
+
+.custom-nav-container {
+
+    padding: 1rem 0%;
+    margin: 0%;
+    
+
+}
+
+.custom-nav-style li a:hover {
+    border-bottom: 0.2rem solid #00c1a2;
+}
+
+.custom-nav-style li {
+    margin-right: 3rem;
+}
+
+
+.custom-nav-title a{
+    color: #00c1a2;
+    margin-right: 3rem;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 2rem;
+    
+}
+
+
+
+
+.custom-nav-button {
+    border: none;
+    padding: 0.3rem 2rem;
+    background-color: #00c1a2;
+    color: white;
+   text-decoration: none;
+}
+
+

@@ -1,0 +1,19 @@
+.custom-tab-btn{
+    border: none;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    
+}
+
+.custom-tab-btn:focus{
+    background-color: tomato;
+    color: white;
+}
+
+
+.custom-admin-tabs {
+    background-image: linear-gradient(70deg, #00c1a2, skyblue);
+    border-radius: 10px;
+    padding: 10px;
+}
