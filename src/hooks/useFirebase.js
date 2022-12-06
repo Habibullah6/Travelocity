@@ -9,9 +9,11 @@ initializeAuthentication()
 const useFirebase = () => {
 
 const [user, setUser] = useState([])
+const [isLoading, setIsLoading] = useState(true)
 const auth = getAuth()
 
 const handleGoogleLogIn =() => {
+    setIsLoading(true)
     const   googleProvider = new GoogleAuthProvider();
     return  signInWithPopup(auth, googleProvider)
     
@@ -19,6 +21,7 @@ const handleGoogleLogIn =() => {
 }
 
 const handleFacebookLogIn = () => {
+    setIsLoading(true)
     const   facebookProvider = new FacebookAuthProvider()
     return  signInWithPopup(auth, facebookProvider)
     
@@ -26,6 +29,7 @@ const handleFacebookLogIn = () => {
 
 
 const handleLogOut = () => {
+    setIsLoading(true)
    signOut(auth)
    .then(()=> {
     swal("Log out successfully")
@@ -33,6 +37,9 @@ const handleLogOut = () => {
    })
    .catch((error) => {
     swal(error.message)
+   })
+   .finally(() => {
+    setIsLoading(false)
    })
 }
 
@@ -43,6 +50,10 @@ useEffect(() => {
             setUser(user)
            
         }
+        else{
+            setUser({})
+        }
+        setIsLoading(false)
         
     })
 }, [])
@@ -59,6 +70,8 @@ return{
     handleGoogleLogIn,
     handleLogOut,
     handleFacebookLogIn,
+    isLoading,
+    setIsLoading
     
 }
 

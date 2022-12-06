@@ -2,12 +2,12 @@ import React from 'react';
 import { BsFacebook } from "react-icons/bs";
 import { ImGoogle3 } from "react-icons/im";
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
-import swal from "sweetalert";
+import swal from 'sweetalert';
 import useAuth from '../../../hooks/useAuth';
 import './Login.css';
 
 const Login = () => {
-    const { handleGoogleLogIn , handleFacebookLogIn, setUser} = useAuth();
+    const { handleGoogleLogIn , handleFacebookLogIn, setUser, setIsLoading} = useAuth();
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -22,6 +22,9 @@ const Login = () => {
         navigate(redirectUri)
         
       })
+      .finally(() => {
+       setIsLoading(false)
+      })
     }
    
     const signInWithFacebook = () => {
@@ -29,10 +32,13 @@ const Login = () => {
     handleFacebookLogIn()
     .then(result => {
       setUser(result.user)
-      
+      navigate(redirectUri)
     })
-    .catch(error => {
+    .catch((error) => {
       swal(error.message)
+    })
+    .finally(() => {
+      setIsLoading(false)
     })
     }
 

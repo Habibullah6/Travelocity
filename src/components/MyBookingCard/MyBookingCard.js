@@ -11,7 +11,7 @@ const MyBookingCard = ({hotel}) => {
 
 
      if(proceed){
-      fetch(`http://localhost:5000/bookingHotel/${id}`, {
+      fetch(`https://travelocity-server-production.up.railway.app/bookingHotel/${id}`, {
         method: "DELETE"
       })
       .then(res => {

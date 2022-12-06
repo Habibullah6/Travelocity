@@ -10,7 +10,7 @@ const Hotels = () => {
     useEffect(() => {
         
         setLoading(true)
-        fetch('http://localhost:5000/hotels')
+        fetch('https://travelocity-server-production.up.railway.app/hotels')
         .then(res => res.json())
         .then(data => {
             setHotels(data)

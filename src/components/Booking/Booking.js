@@ -35,7 +35,7 @@ export default function Booking() {
             cost: cost,
             location: location
         }
-        fetch("http://localhost:5000/bookingHotel", {
+        fetch("https://travelocity-server-production.up.railway.app/bookingHotel", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(bookingInformation)

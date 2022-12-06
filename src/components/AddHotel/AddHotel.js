@@ -8,7 +8,7 @@ const AddHotel = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const handleAddHotel = data => {
-        fetch("http://localhost:5000/hotels", {
+        fetch("https://travelocity-server-production.up.railway.app/hotels", {
             method: "POST",
             headers: {'Content-Type': 'application/json'}, 
             body: JSON.stringify(data)

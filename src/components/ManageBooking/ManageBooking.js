@@ -6,7 +6,7 @@ const ManageBooking = () => {
 
   const [allBooking, setAllBooking] = useState([])
   useEffect(()=> {
-    fetch('http://localhost:5000/bookingHotel')
+    fetch('https://travelocity-server-production.up.railway.app/bookingHotel')
     .then(res => res.json())
     .then(data => {
       setAllBooking(data)
@@ -16,7 +16,7 @@ const ManageBooking = () => {
   const handleDeleteBooking = (id) => {
   const proceed = window.confirm("are you want to delete?")
   if(proceed){
-    fetch(`http://localhost:5000/bookingHotel/${id}`, {
+    fetch(`https://travelocity-server-production.up.railway.app/bookingHotel/${id}`, {
       method: "DELETE"
     })
     .then(res => {

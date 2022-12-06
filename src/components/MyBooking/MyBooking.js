@@ -11,7 +11,7 @@ const MyBooking = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/bookingHotel/${user?.email}`)
+        fetch(`https://travelocity-server-production.up.railway.app/bookingHotel/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setBookingHotel(data)
